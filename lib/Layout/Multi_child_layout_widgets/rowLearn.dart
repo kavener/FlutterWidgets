@@ -14,6 +14,9 @@ class RowLearn extends StatelessWidget {
         // 在flex布局中，子元素应该如何沿着主轴放置,即各个组件的放置的方式， 比如MainAxisAlignment.start 组件都尽量靠近主轴起点，
         // 而起点的方向取决去textDirection: TextDirection.rtl,比如right-to-left即都从右边开始
         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // 主轴应该占用多少空间 max 即占用最大 min则相反
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
         textDirection: TextDirection.ltr,
         children: <Widget>[
           Icon(Icons.access_alarm),
