@@ -16,8 +16,14 @@ class RowLearn extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         // 主轴应该占用多少空间 max 即占用最大 min则相反
         mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        // 交叉轴的布局方式
+        crossAxisAlignment: CrossAxisAlignment.start,
+        // 组件开始方向 ltr:left-to-right
         textDirection: TextDirection.ltr,
+        // 定义了children摆放顺序，默认是down
+        verticalDirection: VerticalDirection.down,
+        // 对齐文本的水平线
+        textBaseline: TextBaseline.alphabetic,
         children: <Widget>[
           Icon(Icons.access_alarm),
           Icon(Icons.access_alarms),
