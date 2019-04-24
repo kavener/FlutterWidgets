@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Flutter go pro',
-      home: RowLearn(),
+      home: ContainerLearn(),
     );
   }
 }
