@@ -110,8 +110,10 @@ class LovePage extends StatelessWidget {
     return new Scaffold(
       appBar: AppBar(title: Text('Favorite Words')),
       body: ListView.builder(
+        // 预限制列表数量
+        itemCount: _loveList.length-1,
         itemBuilder: (BuildContext context, int index) {
-          if (index <= _loveList.length) {
+          if (index <= _loveList.length-1) {
             return new Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
@@ -130,8 +132,10 @@ class LovePage extends StatelessWidget {
                                 TextStyle(color: Colors.brown, fontSize: 30))),
                   ],
                 ));
-          } else {
-            return Center(child: Text('end!!!'));
+          } 
+          // 怎么实现停止滑动，在ListView.builder中 
+          else {
+            return Center(child: Text('$index!!!'));
           }
         },
       ),
