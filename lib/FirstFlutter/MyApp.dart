@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.list),
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, 'love_page');
               },
             ),
@@ -108,35 +108,33 @@ class LovePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-      title: Text('Favorite Words')),
+      appBar: AppBar(title: Text('Favorite Words')),
       body: ListView.builder(
-        itemBuilder: (BuildContext context, int index){
-          if (index <= _loveList.length){
-          return new Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-                        color: Colors.black26, style: BorderStyle.solid)),
-                gradient:
-                    LinearGradient(colors: [Colors.white30, Colors.black12])),
-            height: 40,
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                    flex: 5,
-                    child: Text(_loveList[index].toString(),
-                        style: TextStyle(color: Colors.brown, fontSize: 30))),
-                
-              ],
-            ));}
-            else {
-              return Center(
-                child: Text('end!!!'));
-            }
+        itemBuilder: (BuildContext context, int index) {
+          if (index <= _loveList.length) {
+            return new Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                            color: Colors.black26, style: BorderStyle.solid)),
+                    gradient: LinearGradient(
+                        colors: [Colors.white30, Colors.black12])),
+                height: 40,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        flex: 5,
+                        child: Text(_loveList[index].toString(),
+                            style:
+                                TextStyle(color: Colors.brown, fontSize: 30))),
+                  ],
+                ));
+          } else {
+            return Center(child: Text('end!!!'));
+          }
         },
       ),
-      );
+    );
   }
 }
