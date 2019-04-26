@@ -50,7 +50,9 @@ class RandomWords extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         final _wordPair = WordPair.random();
         // 单个单词行的定制，包括一个单词和一个小心心按钮
-        return Container(
+        return InkResponse(
+          child: 
+            Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
                 // 制作一个下边框作为每行的分割线
@@ -69,7 +71,8 @@ class RandomWords extends StatelessWidget {
                         style: TextStyle(color: Colors.brown, fontSize: 30))),
                 Expanded(flex: 2, child: LoveWords(word: _wordPair)),
               ],
-            ));
+            ))
+        );
       },
     );
   }
