@@ -44,13 +44,16 @@ class HomePage extends StatelessWidget {
 
 // 单词列表页
 class RandomWords extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    assert(debugCheckHasMaterial(context));
     return new ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         final _wordPair = WordPair.random();
         // 单个单词行的定制，包括一个单词和一个小心心按钮
         return InkResponse(
+
           child: 
             Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
