@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'Layout/Single_child_layout_widgets/container_learn.dart';        
+import 'Layout/Single_child_layout_widgets/container_learn.dart';        
 // import 'Layout/Single_child_layout_widgets/padding_learn.dart';
 // import 'Layout/Single_child_layout_widgets/center_learn.dart';
 // import 'Layout/Single_child_layout_widgets/align_learn.dart';
@@ -19,11 +19,26 @@ import 'package:flutter/material.dart';
 // import 'Layout/Multi_child_layout_widgets/listViewLearn.dart';
 
 
-import 'try/herotry.dart';
+// import 'try/herotry.dart';
 // import 'try/network_image_.dart';
 
-import 'FirstFlutter/MyApp.dart';
+// import 'FirstFlutter/MyApp.dart';
+
+
+
+// ------------------------------ Basic
+import 'Basic/appbarLearn.dart';
+
+
 
 void main() => runApp(MyApp());
 
-// c
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Flutter Widgets',
+      home: AppBarLearn()
+    );
+  }
+}

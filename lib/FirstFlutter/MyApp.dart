@@ -42,9 +42,8 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// 单词列表页
+// 单词列表页 
 class RandomWords extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     assert(debugCheckHasMaterial(context));
@@ -53,28 +52,28 @@ class RandomWords extends StatelessWidget {
         final _wordPair = WordPair.random();
         // 单个单词行的定制，包括一个单词和一个小心心按钮
         return InkResponse(
-
-          child: 
-            Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
-            decoration: BoxDecoration(
-                // 制作一个下边框作为每行的分割线
-                border: Border(
-                    bottom: BorderSide(
-                        color: Colors.black26, style: BorderStyle.solid)),
-                // 背景颜色渐变
-                gradient:
-                    LinearGradient(colors: [Colors.white30, Colors.black12])),
-            height: 40,
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                    flex: 5,
-                    child: Text('$_wordPair',
-                        style: TextStyle(color: Colors.brown, fontSize: 30))),
-                Expanded(flex: 2, child: LoveWords(word: _wordPair)),
-              ],
-            ))
+            child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                    // 制作一个下边框作为每行的分割线
+                    border: Border(
+                        bottom: BorderSide(
+                            color: Colors.black26, style: BorderStyle.solid)),
+                    // 背景颜色渐变
+                    gradient: LinearGradient(
+                        colors: [Colors.white30, Colors.black12])),
+                height: 40,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        flex: 5,
+                        child: Text('$_wordPair',
+                            style:
+                                TextStyle(color: Colors.brown, fontSize: 30))),
+                    Expanded(flex: 2, child: LoveWords(word: _wordPair)),
+                  ],
+                )
+            )
         );
       },
     );
@@ -101,25 +100,29 @@ class LoveWordsState extends State<LoveWords> {
     return new IconButton(
       icon: Icon(_icons, size: 30, color: _colors),
       onPressed: () {
-        setState(() {
-          var word = widget.word;
-          if (_colors == Colors.brown[170]) {
-            _colors = Colors.red;
-            _icons = Icons.favorite;
-            // 使用widget.word。
-            _loveList.add(word);
-          } else {
-            _colors = Colors.brown[170];
-            _icons = Icons.favorite_border;
-            _loveList.remove(word);
+        setState(
+          () {
+            var word = widget.word;
+            if (_colors == Colors.brown[170]) {
+              _colors = Colors.red;
+              _icons = Icons.favorite;
+              // 使用widget.word 
+              _loveList.add(word);
+            } 
+            else {
+              _colors = Colors.brown[170];
+              _icons = Icons.favorite_border;
+              _loveList.remove(word);
+              // 
+            }
           }
-        });
+        );
       },
     );
   }
 }
 
-// 显示喜欢的单词列表 页面
+// 显示喜欢的单词列表 页面 
 class LovePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -129,24 +132,24 @@ class LovePage extends StatelessWidget {
         // 限制列表数量
         itemCount: _loveList.length,
         itemBuilder: (BuildContext context, int index) {
-            return new Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                            color: Colors.black26, style: BorderStyle.solid)),
-                    gradient: LinearGradient(
-                        colors: [Colors.white30, Colors.black12])),
-                height: 40,
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                        flex: 5,
-                        child: Text(_loveList[index].toString(),
-                            style:
-                                TextStyle(color: Colors.brown, fontSize: 30))),
-                  ],
-                ));
+          return new Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Colors.black26, style: BorderStyle.solid)),
+                  gradient:
+                      LinearGradient(colors: [Colors.white30, Colors.black12])),
+              height: 40,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                      flex: 5,
+                      child: Text(_loveList[index].toString(),
+                          style: TextStyle(color: Colors.brown, fontSize: 30))),
+                ],
+              )
+          );
         },
       ),
     );
