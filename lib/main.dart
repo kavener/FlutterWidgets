@@ -10,7 +10,7 @@ import 'Layout/Single_child_layout_widgets/container_learn.dart';
 // import 'Layout/Single_child_layout_widgets/baselineLearn.dart';
 // import 'Layout/Single_child_layout_widgets/OffstageLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/rowLearn.dart';
-// import 'Layout/Multi_child_layout_widgets/stackLearn.dart';
+import 'Layout/Multi_child_layout_widgets/stackLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/indexStackLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/gridViewLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/flowLearn.dart';      
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Widgets',
-      home: AppBarLearn()
+      home: StackEx()
     );
   }
 }

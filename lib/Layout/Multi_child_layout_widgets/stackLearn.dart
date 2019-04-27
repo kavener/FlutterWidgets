@@ -40,3 +40,35 @@ class StackLearn extends StatelessWidget {
     );
   }
 }
+
+class StackEx extends StatelessWidget {
+  @override 
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(
+        title: Text('Stack Example'),
+      ),
+      body: Stack(
+        alignment: const Alignment(0.6, 0.6),
+        children: [
+          CircleAvatar(
+            backgroundImage: NetworkImage('https://avatars1.githubusercontent.com/u/20992063?s=460&v=4'),
+            radius: 100,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.black45,
+            ),
+            child: Text(
+              'RuoData',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      )
+    );
+  }
+}
