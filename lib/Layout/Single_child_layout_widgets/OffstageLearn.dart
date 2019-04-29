@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
-
 class OffstageLearn extends StatefulWidget {
   @override 
   OffstageLearnState createState() => OffstageLearnState();
@@ -11,7 +9,7 @@ class OffstageLearn extends StatefulWidget {
 }
 
 class OffstageLearnState extends State<OffstageLearn> {
-  bool _offstage = false;
+  bool _offstage = true;
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

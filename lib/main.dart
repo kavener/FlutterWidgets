@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'Layout/Single_child_layout_widgets/container_learn.dart';        
-// import 'Layout/Single_child_layout_widgets/padding_learn.dart';
+import 'Layout/Single_child_layout_widgets/padding_learn.dart';
 // import 'Layout/Single_child_layout_widgets/center_learn.dart';
 // import 'Layout/Single_child_layout_widgets/align_learn.dart';
 // import 'Layout/Single_child_layout_widgets/fittedBoxLearn.dart';
 // import 'Layout/Single_child_layout_widgets/aspectRatioLearn.dart';
 // import 'Layout/Single_child_layout_widgets/constrainedBoxLearn.dart';
 // import 'Layout/Single_child_layout_widgets/baselineLearn.dart';
-// import 'Layout/Single_child_layout_widgets/OffstageLearn.dart';
-// import 'Layout/Multi_child_layout_widgets/rowLearn.dart';
+import 'Layout/Single_child_layout_widgets/OffstageLearn.dart';
+import 'Layout/Multi_child_layout_widgets/rowLearn.dart';
 import 'Layout/Multi_child_layout_widgets/stackLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/indexStackLearn.dart';
 // import 'Layout/Multi_child_layout_widgets/gridViewLearn.dart';
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Widgets',
-      home: StackEx()
+      home: OffstageLearn()
     );
   }
 }
